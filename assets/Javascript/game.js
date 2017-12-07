@@ -93,10 +93,12 @@ function startGame()
 	document.getElementById('lossCounter').innerHTML = loseCount;
 	document.getElementById('wrongGuesses').innerHTML = wrongLetters;
 	
+	
+}
 
 function compareLetters(userKey)
 {
-				console.log('WORKING!');
+				
 				 
 				if(playerWord.indexOf(userKey) > -1)
 				{
@@ -163,10 +165,7 @@ document.onkeyup = function(event)
 		if(letterGuessed === reUseWord[i] && test === true)
 		{
 			var spliceDword = reUseWord.splice(i,1);
-			//Test / Debug
-			console.log('Double word is = ' + reUseWord[i])
-			console.log('Spliced Word is = ' + spliceDword);
-
+			
 			compareLetters(letterGuessed);
 			winLose();
 		}
